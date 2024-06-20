@@ -130,12 +130,9 @@ terraform init
 
 ### Step 6: Managing Workspaces
 
-Please note that, this project has multiple branches, named by the regions in which I have deployed this solution.
+Please note that, this project can have multiple branches, named by the regions in which you can deploy this solution.
 
-For each branch, the *variables.tf* file which resides at the root of the project, contains a variable named *region* which has a default value which matches the branch name.
-So, the branch called *eu-central-1* has  the **eu-central-1** region as default value. Also, the *server_instance_type* is different based on each branch.
-
-For each branch, I've created a terraform workspace, which contains the terraform state file corresponding to the branch and regions where the solution has been deployed. When switching branches, remember to switch the workspace too, so you have a state file which accurately describes the infrastructure deployed in that particular region.
+The *variables.tf* file which resides at the root of the project, contains a variable named *region* which has a default value set to **eu-north-1**.
 
 Terraform workspaces allows you to manage separate state files for different environments or branches. Here’s how to create and switch between workspaces:
 
@@ -214,11 +211,6 @@ Feel free to fork this repository and make contributions. To contribute:
 3. Commit your changes (`git commit -am 'Add cool feature'`)
 4. Push to the branch (`git push origin feature/new-feature`)
 5. Create a new Pull Request
-
-
-## Acknowledgements
-
-Thanks to [Tailscale](https://tailscale.com) and [HashiCorp](https://www.hashicorp.com) for their fantastic tools that make secure and automated infrastructure management easier.
 
 ---
 
